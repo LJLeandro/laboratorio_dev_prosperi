@@ -19,47 +19,47 @@ namespace laboratorio_dev_prosperi.Controllers
 
         // GET: api/ordemdeservico
         [HttpGet]
-        public JsonResult Get()
+        public ResponseMessage Get()
         {
             ResponseMessage response = context.BuscarTodasAsOrdensDeServico();
 
-            return new JsonResult(response);
+            return response;
         }
 
         // GET api/ordemdeservico/5
         [HttpGet("{numeroServico}")]
-        public JsonResult Get(int numeroServicoProcurado)
+        public ResponseMessage Get(int numeroServicoProcurado)
         {
             ResponseMessage response = context.BuscarOrdemDeServicoPorNumero(numeroServicoProcurado);
 
-            return new JsonResult(response);
+            return response;
         }
 
         // POST api/ordemdeservico
         [HttpPost]
-        public JsonResult Post(OrdemDeServico novaOrdemDeServico)
+        public ResponseMessage Post(OrdemDeServico novaOrdemDeServico)
         {
             ResponseMessage response = context.AdicionarNovaOrdemDeServico(novaOrdemDeServico);
 
-            return new JsonResult(response);
+            return response;
         }
 
         // PUT api/ordemdeservico/5
         [HttpPut]
-        public JsonResult Put(OrdemDeServico ordemDeServicoAlterada)
+        public ResponseMessage Put(OrdemDeServico ordemDeServicoAlterada)
         {
             ResponseMessage response = context.AlterarOrdemDeServico(ordemDeServicoAlterada);
 
-            return new JsonResult(response);
+            return response;
         }
 
         // DELETE api/ordemdeservico/5
         [HttpDelete("{numeroServico}")]
-        public JsonResult Delete(int numeroServicoParaRemocao)
+        public ResponseMessage Delete(int numeroServicoParaRemocao)
         {
             ResponseMessage response = context.RemoverOrdemDeServico(numeroServicoParaRemocao);
 
-            return new JsonResult(response);
+            return response;
         }
     }
 }

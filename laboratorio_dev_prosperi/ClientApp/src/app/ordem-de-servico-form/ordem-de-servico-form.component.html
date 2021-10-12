@@ -1,0 +1,47 @@
+<article>
+  <form [formGroup]="ordemDeServicoForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="numero-ordem-de-servico">Numero da O.S.</label>
+      <input disabled type="number" class="form-control" id="numero-ordem-de-servico" placeholder="0" required>
+    </div>
+
+    <div class="form-group">
+      <label for="titulo-servico">Título do Serviço:</label>
+      <input type="text" class="form-control" id="titulo-servico" placeholder="Escreva a descrição do Serviço." required>
+    </div>
+
+    <!--<div class="form-group">
+      <label for="cnpj">CNPJ:</label>
+      <input type="text" class="form-control" id="cnpj" placeholder="Escreva o CNPJ." required>
+    </div>
+
+    <div class="form-group">
+      <label for="valor">Valor:</label>
+      <input type="number" class="form-control" id="valor" placeholder="Digite o Valor do Serviço." required>
+    </div>
+
+    <div class="form-group">
+      <label for="nome-cliente">Nome do Cliente:</label>
+      <input type="number" class="form-control" id="nome-do-cliente" placeholder="Digite o Nome do Cliente." required>
+    </div>
+
+    <div class="form-group">
+      <label for="cpf-prestador">CPF do Prestador:</label>
+      <input type="number" class="form-control" id="cpf-prestador" placeholder="Digite o CPF do Prestador de Serviço." required>
+    </div>
+
+    <div class="form-group">
+      <label for="nome-prestador">Nome do Prestador:</label>
+      <input type="number" class="form-control" id="nome-prestador" placeholder="Digite o Nome do Prestador de Serviço." required>
+    </div>-->
+
+    <!--<div class="form-group">
+      <label for="data-execucao-servico">Data de Execução do Serviço:</label>
+      <input type="datetime" class="form-control" id="data-execucao-servico">
+    </div>-->
+
+    <div>
+      <input value="Salvar"  type="submit"/>
+    </div>
+  </form>
+</article>
