@@ -1,0 +1,83 @@
+﻿@model laboratorio_dev_prosperi_mvc.Models.OrdemDeServico
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Nova Ordem de Serviço</h1>
+
+<h4>Dados</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        @if (ViewBag.FormResponse != null)
+        {
+            <div class="row">
+                @if (ViewBag.FormResponse.Sucesso == true)
+                {
+                    <label class="text-success">@ViewBag.FormResponse.Mensagem</label>
+                }
+                else
+                {
+                    <label class="text-danger">@ViewBag.FormResponse.Mensagem</label>
+                }
+            </div>
+        }
+
+
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @*<div class="form-group">
+                <label asp-for="NumeroServico" class="control-label"></label>
+                <input asp-for="NumeroServico" class="form-control" />
+                <span asp-validation-for="NumeroServico" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="TituloServico" class="control-label"></label>
+                <input asp-for="TituloServico" class="form-control" />
+                <span asp-validation-for="TituloServico" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CNPJ" class="control-label"></label>
+                <input asp-for="CNPJ" class="form-control" />
+                <span asp-validation-for="CNPJ" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Valor" class="control-label"></label>
+                <input asp-for="Valor" class="form-control" />
+                <span asp-validation-for="Valor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NomeCliente" class="control-label"></label>
+                <input asp-for="NomeCliente" class="form-control" />
+                <span asp-validation-for="NomeCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CPFPrestador" class="control-label"></label>
+                <input asp-for="CPFPrestador" class="form-control" />
+                <span asp-validation-for="CPFPrestador" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NomePrestador" class="control-label"></label>
+                <input asp-for="NomePrestador" class="form-control" />
+                <span asp-validation-for="NomePrestador" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataExecucaoServico" class="control-label"></label>
+                <input asp-for="DataExecucaoServico" class="form-control" />
+                <span asp-validation-for="DataExecucaoServico" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Cadastrar Ordem de Serviço" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar as Ordens de Serviço</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

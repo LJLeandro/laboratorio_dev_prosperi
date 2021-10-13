@@ -33,6 +33,11 @@ export class OrdemDeServicoFormComponent implements OnInit {
     var formData: any = new FormData();
     formData.append("numero_servico", this.ordemDeServicoForm.get('numero-ordem-de-servico')?.value);
     formData.append("titulo_servico", this.ordemDeServicoForm.get('titulo-servico')?.value);
+    formData.append("cnpj", this.ordemDeServicoForm.get('cnpj')?.value);
+    formData.append("valor", this.ordemDeServicoForm.get('valor')?.value);
+    formData.append("nome_cliente", this.ordemDeServicoForm.get('nome-do-cliente')?.value);
+    formData.append("cpf_prestador", this.ordemDeServicoForm.get('cpf-prestador')?.value);
+    formData.append("nome_prestador", this.ordemDeServicoForm.get('tnome-prestador')?.value);
 
     console.log("Titulo do Serviço: " + this.ordemDeServicoForm.get('titulo-servico')?.value);
   }
